@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+    border-radius: 10px;
+    height: 100%;
+    width: 96.5%;
+    background-color: #0E0C15;
+    font-family:Arial, Helvetica, sans-serif;
+}

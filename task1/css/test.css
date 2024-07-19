@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+  
+  .card-container {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    margin: 32px; /* Equivalent to Tailwind's m-8 */
+  }
+  
+  .card {
+    position: absolute;
+    inset: 0.5rem; /* Equivalent to Tailwind's inset-0.5 */
+    background-color: #333333; /* Equivalent to Tailwind's bg-n-8 */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    border-top-right-radius: 0; /* Flat top right corner */
+    overflow: hidden;
+    transition: z-index 0.3s;
+  }
+  
+  .card:hover {
+    z-index: 20;
+  }
+  
+  .hover-content {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover .hover-content {
+    opacity: 1;
+  }
+  

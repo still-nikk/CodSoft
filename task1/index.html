@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal | Portfolio</title>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/skills.css" />
+    <link rel="stylesheet" href="./css/projects.css" />
+  </head>
+
+  <body id="top">
+    <div id="header-container">
+      <div id="header-left">
+        <img
+          id="nik-logo"
+          src="./assets/nikunjlogo.svg"
+          height=""
+          width="150"
+          alt="logo"
+        />
+      </div>
+
+      <div id="header-mid">
+        <div id="navbar-elements">
+          <a id="element-div" href="#top">HOME</a>
+          <a id="element-div" href="#hero-container">ABOUT&nbspME</a>
+          <a id="element-div" href="#skillsContainer">SKILLS</a>
+          <a id="element-div" href="#projectsContainer">PROJECTS</a>
+        </div>
+      </div>
+
+      <div id="header-right">
+        <input id="checkbox" type="checkbox" />
+        <label onclick="showOrHide()" class="toggle" for="checkbox">
+          <div id="bar1" class="bars"></div>
+          <div id="bar2" class="bars"></div>
+          <div id="bar3" class="bars"></div>
+        </label>
+      </div>
+
+      <div class="menuBox" id="menuBox">
+        <div
+          id="menu-item"
+          onclick="window.open('https://github.com/still-nikk', '_blank')"
+        >
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA9pJREFUSEvFlt+LG1UUx7/f2WVZXVbm3pnYdiXaXVToD6rU+qPFP6AoaNUHH8TVSq19Uinog6BQFAQrighFW9SKPohQFQoFn32wuopWrYLQ2roaIcm9k2W7WDeZOXpDUieTzG6yfdhAIJk553zOufd7zr3EKn24SlwMBBYRz1p7G8kpEVkHgCT/AnBOKXWSZNxvIX2Boyi6TkSeA/AAgCAneETyGMmXfd8/u1wCS4JFZMRa+zzJZwGMLBes9b4B4BWl1AGSi3k+ueBKpbLO87zjJG/pE9hhRnKm0WjsKhQKpV7+PcFRFK0XkS8BrF0JNOVTIrlDKXU+G6cLXKvVVBzHX5G8oWV8xokIwFSfSZwn+Y+I3Niy/wXAdq31XNq/C2yMOUrykbaRiOwMguDzWq22NY7jg57nbRIRF8x9GyKyieQGAGeSJNkfhuGMtfZOAF+kQEe01ntzwdVq9XbP8052GJCTSqlzfVbbNCuXy2uHh4ddm6Xyl81BEPzcftBRsbX2QwAPZcA3K6VODQI2xmwkeToT5x2l1J4usIgMRVFUBeCn0iyPjIxsHh8frwwIvoqk24qJtNC01td0gWu12rYkSWYyWT6plHpzEGjb1hizl+Tbad8kSTaGYegS+n9kRlG0S0Q+TRt6njfl+/5vKwFXKpWJoaGhPzO+92itj3eAjTF7SB5JG8ZxPFEoFNIi6TuHUql05ejo6ELeCl4SlzHmcZKHM5Fv0lr/0DctZWiMKZL8Pe0rIs8EQfBqdqnvF5FjmQwfU0q9txJwFEX3ishnmXiPKqXe7wBXq9UNnudd6rOWwwmt9d0rARtjPiF5X0Yzt/q+/00H2P2x1rp26jj2SE4rpT4YBB5F0bSINCtLfS4opfz2mZ0dIG8BeAJAXUROkdzWzI58N47jF8IwzKq0I3LrcDkAYDqbqIgcDYJgd/t5Bzg9cUg+JSLfAXAt5lYhIfmtiLymtf4oHdgYsxPASyS3pls0A9+itf6xJ9g9NMa8TvJp91tEtnuet0ZEPm5fBEh2jdD5+flCvV4v522HiLwRBEEzZi54dnb2irGxMXdQbAHQFJcLvLi4+DDJi1rrQ70A1lq3DekR2Tb7fmFhYUexWPx7SXBLZNeS/FpE1gDYp5Q6TFKWEpi11k249RmbkojcEQTBbNY39+rTEsoJAO6svQDgVwDF/yq+OqdiNyyKqXc/ichdvaBd7ZQN2Bp7TqX7AXhOAlrrMAfsRqu7KtUBHJybm3txcnLyYt4q9XW9bY2/fQCu11o/mAN2fftHkiSHlmu7ZSteak8v911fFV8upJf/qoH/Beq6hi5mkssVAAAAAElFTkSuQmCC"
+          />&nbsp&nbspGithub
+        </div>
+        <div class="downloadResume" id="menu-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYNJREFUSEvtl89KAzEQxucbD/bUNikq+BginizVQn0YD/oI1pve9CA+iXjQQx9BEc89+gc2yVFBMrKlC7XdmmxdWAVzCjuT+c1HvmR3QRUNVMSluWDn3Ib3fk9Eat81x8wfAC6azaYtIiIXbK09FJGzAoXumLlbBJ4LNsa8EtFKAXCa+sjM7Vj4PLCklUTkuNVq9ec1YIwZ5U2MaHhZ4HciWh438MDMnZDyssAnIrIFoDuGB5WXAgbQd86d1uv1q1h4KeDMC8PhsNZoNG6IaDukPBqcGWnScDnmmvEhgFulVG868CNwkiQvAFYDx85rrZcWBidJMjpWzDxQSg3SuTGmDWDXe88zhYEdIuqkz7XWMwKjFRe8TChtFMDR3wXHGGlSXWmKKwNn5grtdXa3l6Y4BJyO/31wZXtcGfjfXCGXL+Rqa+2ziKyFikfGn7TW61FvJ2vtgYicRxYOpe1rrS+jwGmSc27Te98TkewjLgT4EgfwBuBaKXWft/D3/cIUkrdA8icwW3Uu69rs5gAAAABJRU5ErkJggg=="
+          />&nbsp&nbspDownload Resume
+        </div>
+        <div
+          id="menu-item"
+          onclick="window.open('https://www.linkedin.com/in/nikunj-maheshwari1')"
+        >
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAeFJREFUSEvtl01rE1EUht+TyQyCTHDOdEQRu9CFQhF33Yn1D1R/hqigrnUl6FIRlK668wcI4k5QcOVaCoJFUBBjJ3NvTFaSj1dvyZSJFPLhJCni3d0z3PPc854P7ggWtGRBXBwcsDFmWUROlakEyU+q+qXocyjiNE2Pe573FShdCfZ6vRNJknzL4UNga+0ayddlRrsHErkURdGbscEkP4rISQCH/uZCMiF4XVVf1Ov1w0EQvARwcVr42GAR+R5F0bEcZIy5CmBj5mAAPQCxqv5wMGvtQ5K35wGGiLwiuUlyRURuADgyF/C0kP3OjZ1jd1hErgDYlZrkTQBu/+x3lW8ObKsA1kk+CoLgbRiGO8aYCwDuAVgbGhiTVHW1Wk1qtVrDOTDGPAFwHcB9Vb3rbFmWrajqtoj8LEJIVq217wGcnaqPR4ELFX/O9/16GIZpwXYNwNOZgY0xzwFcdl1A8nwcx1sO1mg0ViuVyruZgLMsq4nIbg0M1h1VfTBIzTKAzzMBN5vN0/1+fzt3TvJxHMe33L7Vai11u9096Seqat/3j+Z526+40jQ943neh0LEG6rqcot2u510Op2dqSL+D/6zj/89qRc2q+cGXthjL584c3/elintKF8H509i1E3L+v4LOFOpLr62oN4AAAAASUVORK5CYII="
+          />&nbsp&nbspLetsConnect
+        </div>
+        <div
+          id="menu-item"
+          onclick="window.open('https://www.codsoft.in/web-development', '_blank')"
+        >
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYZJREFUSEvtljFLw1AQx+9CaECl5OWWLhnEQUdB3BU/gdDNxUEQ/BJW/QwOCn4B/RA6dHRwbQftWCXNE0kRMryTlDakMVETXgiiGR9597v//453h1DThzVxYQ48HA4XLctqK6WWdSZkGMZTEATXruu+z+LGYCmlzcz3ALCiE5qI1QvDcKPVao2jsxjs+/4RAJxXBJ2EZeYDIrqaA49Gow4iHkeHjuNorb3v+zwFnxBR5x+caXXUdACwXrD2D0KI19mdUlZLKbeY+bYIGBG3hRB3vxZcj9VFLM77t2yNf6J4IIQY6AZ/21zMHD8MWfCyimsD12N1bc31t8BSyn1mjmb0gg7lzHxIRJe5YzEMw6VGo3EBAHs6gBMQYl8ptUlEb7lgAOgBwOp0eL8AQJSEKpuEYRiPQRDcZO5cyQ0kAeiaprnbbDa9stC8e/GKkwIrRDy1bfsMEUsr/SrZT2BEfGbmtuM4Xd0qk/HS4J2qrE2LiMGe560RUb8qa3PBVdqaFVvr/lwk+Q/iJVou+7vsUQAAAABJRU5ErkJggg=="
+          />&nbsp&nbspAbout Codsoft
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-container">
+      <h1 id="hero-heading">
+        Hey there! I am
+        <span id="hero-name"> Nikunj Maheshwari </span>
+        <br />
+        A Web Development Intern at <br />
+        <span id="hero-company"> CodSoft </span>
+      </h1>
+      <p>
+        In pursuit of new challenges and collaborative opportunities within the
+        ever-evolving field of web development, I welcome connections from
+        fellow enthusiasts and innovators alike. Let's brainstorm and create
+        something remarkable together!
+      </p>
+
+      <div id="heroMain">
+        <div id="heroImageContainer">
+          <img id="heroImage" src="./assets/nikunjPFP.jpg" alt="" />
+        </div>
+        <div id="heroText">
+          <span><br /><br />Hi There.</span><br /><br /><br />
+          I'm Nikunj, a second-year Computer Science student at Symbiosis
+          Institute of Technology, Pune. My passion lies in crafting captivating
+          websites through front-end development. It's where I can let my
+          creativity run wild, weaving together code and design to create
+          engaging digital experiences. Lately, though, I've found myself drawn
+          to the vast world of cloud computing, operating systems, and
+          networking. The challenge of finding innovative solutions outside my
+          comfort zone excites me, pushing me to explore new horizons.
+          Hackathons have become my playground, where I thrive on the adrenaline
+          of competition and the rush of turning ideas into reality under
+          pressure.
+        </div>
+      </div>
+    </div>
+
+    <div id="skillsContainer">
+      <div id="skillsMain">
+        <div id="skillsLeft">
+          <h1>Certifications and Skillset</h1>
+          <div id="skillsList">
+            <div id="skillsListItem">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwBJREFUSEvFlk9IFHEUx79vR9eZLRSlDnWIDp20nVWChE6WYX+E7N/BW0WQhDtLfzTolF2iiCR3FqE/5KWLQWiHSDHCQxcpyR0zIgrrGhoaujPr6r52dmdld3Nt3R3zdxn4zXvv8/u+935/CBs0aIO4WBXc7Z4pjzhKqilKVUS8JZdFMtMUCfxxEcbY5bHymWw+K4LVmvntWBL8AJ/KBbaKTa+zOOJtGS2dyrT5C+yvCVfSYvQ1CNsKhCbdJwHUK5pkfpdHGvh+pb5DKMJ7AFsTFvQc4G5Fk96sZREBWa9nIi+Yj1t+k87iyN5U5WlgvxzqJ1CTaczEbb6g695agJm2qqzfiM11JDTgoRKUWpI2y2BL7Q/rR6+iSc2FQJO+qqwPADgEIGJALG/XaD6xDmuosn4ewOO42iWh2jfhDNoB9nuMBmIejMdiOqqMi6/SwAFZv87ALXNyWhOFDlDUDnBn1WxFseCctnrmkqKJXZmKzVqYNYGiSbYeLLFasyXipqJJ8ZqnprogsH8Xl5DLeAEHbitj0nBqttYN3LOTxblS4yWAAwAMAtd5NddISv/YrziuVDIGQKhLNBCGWRcP+75S2Baw6gmpAN4qQVdvMmAuUNM271SrcqgNoLsAlsDR08r4pv5coQWB/W79LBF6LKVxOMjRGsvAQetUGto8Kx47952MlbZg3orNYAE51MygpwCEtOCEIWeR2NgySpFs+74gcBzuCZ1gpmcAipJK/wUtKNWpSvzVRiNFuS/WxcO5QG0Dm4G6dof2iSXSu9XSu9z5tVxKujEbP62Ir3qDrk5bT65s9e3y6PsdjPh9TsQnvUFX338Bq259EIQGAIuORbG89RPNrTtY9Rh3wHzNysYjRZMuJDNj2yWRmuqAO9zEFDVfG0es+W+0EKn1fi61rscst1O2euU5/4UENHg/SMnXjbUTrWgB2bjI4O48g6/oRownC9GF9isTZb8yDZZT/WAPl4Uj4TMErigMTj8ZPA5JDPpG6He2WLa+NNay4A0D/wF223kuSZ0uoQAAAABJRU5ErkJggg=="
+              />&nbsp&nbspPower User [ LINUX ]
+            </div>
+            <div id="skillsListItem">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwBJREFUSEvFlk9IFHEUx79vR9eZLRSlDnWIDp20nVWChE6WYX+E7N/BW0WQhDtLfzTolF2iiCR3FqE/5KWLQWiHSDHCQxcpyR0zIgrrGhoaujPr6r52dmdld3Nt3R3zdxn4zXvv8/u+935/CBs0aIO4WBXc7Z4pjzhKqilKVUS8JZdFMtMUCfxxEcbY5bHymWw+K4LVmvntWBL8AJ/KBbaKTa+zOOJtGS2dyrT5C+yvCVfSYvQ1CNsKhCbdJwHUK5pkfpdHGvh+pb5DKMJ7AFsTFvQc4G5Fk96sZREBWa9nIi+Yj1t+k87iyN5U5WlgvxzqJ1CTaczEbb6g695agJm2qqzfiM11JDTgoRKUWpI2y2BL7Q/rR6+iSc2FQJO+qqwPADgEIGJALG/XaD6xDmuosn4ewOO42iWh2jfhDNoB9nuMBmIejMdiOqqMi6/SwAFZv87ALXNyWhOFDlDUDnBn1WxFseCctnrmkqKJXZmKzVqYNYGiSbYeLLFasyXipqJJ8ZqnprogsH8Xl5DLeAEHbitj0nBqttYN3LOTxblS4yWAAwAMAtd5NddISv/YrziuVDIGQKhLNBCGWRcP+75S2Baw6gmpAN4qQVdvMmAuUNM271SrcqgNoLsAlsDR08r4pv5coQWB/W79LBF6LKVxOMjRGsvAQetUGto8Kx47952MlbZg3orNYAE51MygpwCEtOCEIWeR2NgySpFs+74gcBzuCZ1gpmcAipJK/wUtKNWpSvzVRiNFuS/WxcO5QG0Dm4G6dof2iSXSu9XSu9z5tVxKujEbP62Ir3qDrk5bT65s9e3y6PsdjPh9TsQnvUFX338Bq259EIQGAIuORbG89RPNrTtY9Rh3wHzNysYjRZMuJDNj2yWRmuqAO9zEFDVfG0es+W+0EKn1fi61rscst1O2euU5/4UENHg/SMnXjbUTrWgB2bjI4O48g6/oRownC9GF9isTZb8yDZZT/WAPl4Uj4TMErigMTj8ZPA5JDPpG6He2WLa+NNay4A0D/wF223kuSZ0uoQAAAABJRU5ErkJggg=="
+              />&nbsp&nbspBits and Bytes Of Networking [ GOOGLE ]
+            </div>
+            <div id="skillsListItem">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwBJREFUSEvFlk9IFHEUx79vR9eZLRSlDnWIDp20nVWChE6WYX+E7N/BW0WQhDtLfzTolF2iiCR3FqE/5KWLQWiHSDHCQxcpyR0zIgrrGhoaujPr6r52dmdld3Nt3R3zdxn4zXvv8/u+935/CBs0aIO4WBXc7Z4pjzhKqilKVUS8JZdFMtMUCfxxEcbY5bHymWw+K4LVmvntWBL8AJ/KBbaKTa+zOOJtGS2dyrT5C+yvCVfSYvQ1CNsKhCbdJwHUK5pkfpdHGvh+pb5DKMJ7AFsTFvQc4G5Fk96sZREBWa9nIi+Yj1t+k87iyN5U5WlgvxzqJ1CTaczEbb6g695agJm2qqzfiM11JDTgoRKUWpI2y2BL7Q/rR6+iSc2FQJO+qqwPADgEIGJALG/XaD6xDmuosn4ewOO42iWh2jfhDNoB9nuMBmIejMdiOqqMi6/SwAFZv87ALXNyWhOFDlDUDnBn1WxFseCctnrmkqKJXZmKzVqYNYGiSbYeLLFasyXipqJJ8ZqnprogsH8Xl5DLeAEHbitj0nBqttYN3LOTxblS4yWAAwAMAtd5NddISv/YrziuVDIGQKhLNBCGWRcP+75S2Baw6gmpAN4qQVdvMmAuUNM271SrcqgNoLsAlsDR08r4pv5coQWB/W79LBF6LKVxOMjRGsvAQetUGto8Kx47952MlbZg3orNYAE51MygpwCEtOCEIWeR2NgySpFs+74gcBzuCZ1gpmcAipJK/wUtKNWpSvzVRiNFuS/WxcO5QG0Dm4G6dof2iSXSu9XSu9z5tVxKujEbP62Ir3qDrk5bT65s9e3y6PsdjPh9TsQnvUFX338Bq259EIQGAIuORbG89RPNrTtY9Rh3wHzNysYjRZMuJDNj2yWRmuqAO9zEFDVfG0es+W+0EKn1fi61rscst1O2euU5/4UENHg/SMnXjbUTrWgB2bjI4O48g6/oRownC9GF9isTZb8yDZZT/WAPl4Uj4TMErigMTj8ZPA5JDPpG6He2WLa+NNay4A0D/wF223kuSZ0uoQAAAABJRU5ErkJggg=="
+              />&nbsp&nbspCSS Basic [ HACKERRANK ]
+            </div>
+            <div id="skillsListItem">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwBJREFUSEvFlk9IFHEUx79vR9eZLRSlDnWIDp20nVWChE6WYX+E7N/BW0WQhDtLfzTolF2iiCR3FqE/5KWLQWiHSDHCQxcpyR0zIgrrGhoaujPr6r52dmdld3Nt3R3zdxn4zXvv8/u+935/CBs0aIO4WBXc7Z4pjzhKqilKVUS8JZdFMtMUCfxxEcbY5bHymWw+K4LVmvntWBL8AJ/KBbaKTa+zOOJtGS2dyrT5C+yvCVfSYvQ1CNsKhCbdJwHUK5pkfpdHGvh+pb5DKMJ7AFsTFvQc4G5Fk96sZREBWa9nIi+Yj1t+k87iyN5U5WlgvxzqJ1CTaczEbb6g695agJm2qqzfiM11JDTgoRKUWpI2y2BL7Q/rR6+iSc2FQJO+qqwPADgEIGJALG/XaD6xDmuosn4ewOO42iWh2jfhDNoB9nuMBmIejMdiOqqMi6/SwAFZv87ALXNyWhOFDlDUDnBn1WxFseCctnrmkqKJXZmKzVqYNYGiSbYeLLFasyXipqJJ8ZqnprogsH8Xl5DLeAEHbitj0nBqttYN3LOTxblS4yWAAwAMAtd5NddISv/YrziuVDIGQKhLNBCGWRcP+75S2Baw6gmpAN4qQVdvMmAuUNM271SrcqgNoLsAlsDR08r4pv5coQWB/W79LBF6LKVxOMjRGsvAQetUGto8Kx47952MlbZg3orNYAE51MygpwCEtOCEIWeR2NgySpFs+74gcBzuCZ1gpmcAipJK/wUtKNWpSvzVRiNFuS/WxcO5QG0Dm4G6dof2iSXSu9XSu9z5tVxKujEbP62Ir3qDrk5bT65s9e3y6PsdjPh9TsQnvUFX338Bq259EIQGAIuORbG89RPNrTtY9Rh3wHzNysYjRZMuJDNj2yWRmuqAO9zEFDVfG0es+W+0EKn1fi61rscst1O2euU5/4UENHg/SMnXjbUTrWgB2bjI4O48g6/oRownC9GF9isTZb8yDZZT/WAPl4Uj4TMErigMTj8ZPA5JDPpG6He2WLa+NNay4A0D/wF223kuSZ0uoQAAAABJRU5ErkJggg=="
+              />&nbsp&nbspSQL Basics [ HACKERRANK ]
+            </div>
+            <div id="skillsListItem">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwBJREFUSEvFlk9IFHEUx79vR9eZLRSlDnWIDp20nVWChE6WYX+E7N/BW0WQhDtLfzTolF2iiCR3FqE/5KWLQWiHSDHCQxcpyR0zIgrrGhoaujPr6r52dmdld3Nt3R3zdxn4zXvv8/u+935/CBs0aIO4WBXc7Z4pjzhKqilKVUS8JZdFMtMUCfxxEcbY5bHymWw+K4LVmvntWBL8AJ/KBbaKTa+zOOJtGS2dyrT5C+yvCVfSYvQ1CNsKhCbdJwHUK5pkfpdHGvh+pb5DKMJ7AFsTFvQc4G5Fk96sZREBWa9nIi+Yj1t+k87iyN5U5WlgvxzqJ1CTaczEbb6g695agJm2qqzfiM11JDTgoRKUWpI2y2BL7Q/rR6+iSc2FQJO+qqwPADgEIGJALG/XaD6xDmuosn4ewOO42iWh2jfhDNoB9nuMBmIejMdiOqqMi6/SwAFZv87ALXNyWhOFDlDUDnBn1WxFseCctnrmkqKJXZmKzVqYNYGiSbYeLLFasyXipqJJ8ZqnprogsH8Xl5DLeAEHbitj0nBqttYN3LOTxblS4yWAAwAMAtd5NddISv/YrziuVDIGQKhLNBCGWRcP+75S2Baw6gmpAN4qQVdvMmAuUNM271SrcqgNoLsAlsDR08r4pv5coQWB/W79LBF6LKVxOMjRGsvAQetUGto8Kx47952MlbZg3orNYAE51MygpwCEtOCEIWeR2NgySpFs+74gcBzuCZ1gpmcAipJK/wUtKNWpSvzVRiNFuS/WxcO5QG0Dm4G6dof2iSXSu9XSu9z5tVxKujEbP62Ir3qDrk5bT65s9e3y6PsdjPh9TsQnvUFX338Bq259EIQGAIuORbG89RPNrTtY9Rh3wHzNysYjRZMuJDNj2yWRmuqAO9zEFDVfG0es+W+0EKn1fi61rscst1O2euU5/4UENHg/SMnXjbUTrWgB2bjI4O48g6/oRownC9GF9isTZb8yDZZT/WAPl4Uj4TMErigMTj8ZPA5JDPpG6He2WLa+NNay4A0D/wF223kuSZ0uoQAAAABJRU5ErkJggg=="
+              />&nbsp&nbspMemory Management [ COURSERA ]
+            </div>
+          </div>
+          <button
+            onclick="window.open('https://www.hackerrank.com/profile/nikunj_2904', '_blank')"
+          >
+            <span class="text">EXTRAS</span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+            <span class="blob"></span>
+          </button>
+        </div>
+        <div id="skillsRight">
+          <div id="skillsRightDescription">
+            As a frontend developer, I possess a diverse set of technical skills
+            and expertise to create engaging and interactive web experiences.
+          </div>
+          <div id="skillsSkills">
+            <div id="specialButton">
+              <div class="card">
+                <div class="background"></div>
+                <div class="logo">FrontEnd</div>
+
+                <a href="#"
+                  ><div class="box box1">
+                    <span class="icon">
+                      <svg
+                        height="30px"
+                        width="30px"
+                        version="1.1"
+                        id="_x32_"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512"
+                        xml:space="preserve"
+                        fill="#EEEEEE"
+                        stroke="#EEEEEE"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <style type="text/css">
+                            .st0 {
+                              fill: #eeeeee;
+                            }
+                          </style>
+                          <g>
+                            <polygon
+                              class="st0"
+                              points="193.431,261.016 211.237,261.016 318.569,261.016 312.062,334.41 256,348.67 199.938,334.41 196.059,290.703 138.856,290.703 146.742,379.683 256,407.465 365.262,379.683 380.403,208.788 188.801,208.788 183.74,151.682 385.467,151.682 390.52,94.696 121.481,94.696 136.224,261.016 "
+                            ></polygon>
+                            <path
+                              class="st0"
+                              d="M20.366,0l0.984,10.627l41.882,452.361L256,512l192.767-49.012L491.634,0H20.366z M402.505,423.462 L256,460.713l-146.505-37.251L74.888,49.711h362.223L402.505,423.462z"
+                            ></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </span></div
+                ></a>
+
+                <a href="##"
+                  ><div class="box box2">
+                    <span class="icon">
+                      <svg
+                        height="25px"
+                        width="25px"
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#EEEEEE"
+                        stroke="#EEEEEE"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <title>css</title>
+                          <g id="Layer_2" data-name="Layer 2">
+                            <g id="invisible_box" data-name="invisible box">
+                              <rect width="48" height="48" fill="none"></rect>
+                            </g>
+                            <g id="Q3_icons" data-name="Q3 icons">
+                              <path
+                                d="M24,46,8.3,41.7,5,4H43L39.7,41.7ZM12,38.6l12,3.3,12-3.3L38.6,8H9.4Z"
+                              ></path>
+                              <path
+                                d="M14,13H34L32.2,34.3,23.9,37l-8.4-2.1-.9-7.2h4.5v3.6l4.8.9,4.4-.9V25.9H14.6l-.3-4.5a2.3,2.3,0,0,1,1.5-.6c6.9,0,12.5.6,12.5.6V17.8H14.6Z"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </span></div
+                ></a>
+
+                <a href="###"
+                  ><div class="box box3">
+                    <span class="icon">
+                      <svg
+                        height="20px"
+                        width="20px"
+                        fill="#EEEEEE"
+                        viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#EEEEEE"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M 5 5 L 5 27 L 27 27 L 27 5 L 5 5 z M 7 7 L 25 7 L 25 25 L 7 25 L 7 7 z M 20.244141 15 C 18.819141 15 17.898438 15.912141 17.898438 17.119141 C 17.898437 18.430141 18.667172 19.056781 19.826172 19.550781 L 20.226562 19.722656 C 20.958563 20.045656 21.394531 20.234156 21.394531 20.785156 C 21.394531 21.250156 20.967734 21.583984 20.302734 21.583984 C 19.514734 21.583984 19.066609 21.166469 18.724609 20.605469 L 17.414062 21.355469 C 17.879062 22.286469 18.847844 23 20.339844 23 C 21.859844 23 23 22.211578 23 20.767578 C 23 19.418578 22.230328 18.819234 20.861328 18.240234 L 20.462891 18.068359 C 19.769891 17.764359 19.474609 17.564844 19.474609 17.089844 C 19.474609 16.699844 19.769141 16.396484 20.244141 16.396484 C 20.710141 16.396484 21.003297 16.595844 21.279297 17.089844 L 22.535156 16.283203 C 22.003156 15.352203 21.270141 15 20.244141 15 z M 14.394531 15.095703 L 14.394531 20.558594 C 14.394531 21.356594 14.052297 21.564453 13.529297 21.564453 C 12.978297 21.564453 12.741141 21.185281 12.494141 20.738281 L 11.183594 21.527344 C 11.563594 22.335344 12.312703 23 13.595703 23 C 15.020703 23 16 22.239172 16 20.576172 L 16 15.095703 L 14.394531 15.095703 z"
+                          ></path>
+                        </g></svg
+                    ></span></div
+                ></a>
+
+                <div class="box box4"></div>
+              </div>
+
+              <div class="card">
+                <div class="background"></div>
+                <div class="logo">DevOps</div>
+
+                <a href="#"
+                  ><div class="box box1">
+                    <span class="icon">
+                      <svg
+                        height="35px"
+                        width="35px"
+                        viewBox="1 0 18 18"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <g fill="#EEE">
+                            <path
+                              d="M4.51 7.687c0 .197.02.357.058.475.042.117.096.245.17.384a.233.233 0 01.037.123c0 .053-.032.107-.1.16l-.336.224a.255.255 0 01-.138.048c-.054 0-.107-.026-.16-.074a1.652 1.652 0 01-.192-.251 4.137 4.137 0 01-.164-.315c-.416.491-.937.737-1.565.737-.447 0-.804-.129-1.064-.385-.261-.256-.394-.598-.394-1.025 0-.454.16-.822.484-1.1.325-.278.756-.416 1.304-.416.18 0 .367.016.564.042.197.027.4.07.612.118v-.39c0-.406-.085-.689-.25-.854-.17-.166-.458-.246-.868-.246-.186 0-.377.022-.574.07a4.23 4.23 0 00-.575.181 1.525 1.525 0 01-.186.07.326.326 0 01-.085.016c-.075 0-.112-.054-.112-.166v-.262c0-.085.01-.15.037-.186a.399.399 0 01.15-.113c.185-.096.409-.176.67-.24.26-.07.537-.101.83-.101.633 0 1.096.144 1.394.432.293.288.442.726.442 1.314v1.73h.01zm-2.161.811c.175 0 .356-.032.548-.096.192-.064.362-.182.505-.342a.848.848 0 00.181-.341c.032-.129.054-.283.054-.465V7.03a4.43 4.43 0 00-.49-.09 3.996 3.996 0 00-.5-.033c-.357 0-.617.07-.793.214-.176.144-.26.347-.26.614 0 .25.063.437.196.566.128.133.314.197.559.197zm4.273.577c-.096 0-.16-.016-.202-.054-.043-.032-.08-.106-.112-.208l-1.25-4.127a.938.938 0 01-.048-.214c0-.085.042-.133.127-.133h.522c.1 0 .17.016.207.053.043.032.075.107.107.208l.894 3.535.83-3.535c.026-.106.058-.176.101-.208a.365.365 0 01.213-.053h.426c.1 0 .17.016.212.053.043.032.08.107.102.208l.84 3.578.92-3.578a.459.459 0 01.107-.208.347.347 0 01.208-.053h.495c.085 0 .133.043.133.133 0 .027-.006.054-.01.086a.768.768 0 01-.038.133l-1.283 4.127c-.031.107-.069.177-.111.209a.34.34 0 01-.203.053h-.457c-.101 0-.17-.016-.213-.053-.043-.038-.08-.107-.101-.214L8.213 5.37l-.82 3.439c-.026.107-.058.176-.1.213-.043.038-.118.054-.213.054h-.458zm6.838.144a3.51 3.51 0 01-.82-.096c-.266-.064-.473-.134-.612-.214-.085-.048-.143-.101-.165-.15a.38.38 0 01-.031-.149v-.272c0-.112.042-.166.122-.166a.3.3 0 01.096.016c.032.011.08.032.133.054.18.08.378.144.585.187.213.042.42.064.633.064.336 0 .596-.059.777-.176a.575.575 0 00.277-.508.52.52 0 00-.144-.373c-.095-.102-.276-.193-.537-.278l-.772-.24c-.388-.123-.676-.305-.851-.545a1.275 1.275 0 01-.266-.774c0-.224.048-.422.143-.593.096-.17.224-.32.384-.438.16-.122.34-.213.553-.277.213-.064.436-.091.67-.091.118 0 .24.005.357.021.122.016.234.038.346.06.106.026.208.052.303.085.096.032.17.064.224.096a.461.461 0 01.16.133.289.289 0 01.047.176v.251c0 .112-.042.171-.122.171a.552.552 0 01-.202-.064 2.428 2.428 0 00-1.022-.208c-.303 0-.543.048-.708.15-.165.1-.25.256-.25.475 0 .149.053.277.16.379.106.101.303.202.585.293l.756.24c.383.123.66.294.825.513.165.219.244.47.244.748 0 .23-.047.437-.138.619a1.435 1.435 0 01-.388.47c-.165.133-.362.23-.591.299-.24.075-.49.112-.761.112z"
+                            ></path>
+                            <path
+                              fill-rule="evenodd"
+                              d="M14.465 11.813c-1.75 1.297-4.294 1.986-6.481 1.986-3.065 0-5.827-1.137-7.913-3.027-.165-.15-.016-.353.18-.235 2.257 1.313 5.04 2.109 7.92 2.109 1.941 0 4.075-.406 6.039-1.239.293-.133.543.192.255.406z"
+                              clip-rule="evenodd"
+                            ></path>
+                            <path
+                              fill-rule="evenodd"
+                              d="M15.194 10.98c-.223-.287-1.479-.138-2.048-.069-.17.022-.197-.128-.043-.24 1-.705 2.645-.502 2.836-.267.192.24-.053 1.89-.99 2.68-.143.123-.281.06-.217-.1.212-.53.686-1.72.462-2.003z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </g>
+                        </g></svg
+                    ></span></div
+                ></a>
+
+                <a href="##"
+                  ><div class="box box2">
+                    <span class="icon">
+                      <svg
+                        height="25px"
+                        width="25px"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            fill="#EEEE"
+                            d="M12.342 4.536l.15-.227.262.159.116.083c.28.216.869.768.996 1.684.223-.04.448-.06.673-.06.534 0 .893.124 1.097.227l.105.057.068.045.191.156-.066.2a2.044 2.044 0 01-.47.73c-.29.299-.8.652-1.609.698l-.178.005h-.148c-.37.977-.867 2.078-1.702 3.066a7.081 7.081 0 01-1.74 1.488 7.941 7.941 0 01-2.549.968c-.644.125-1.298.187-1.953.185-1.45 0-2.73-.288-3.517-.792-.703-.449-1.243-1.182-1.606-2.177a8.25 8.25 0 01-.461-2.83.516.516 0 01.432-.516l.068-.005h10.54l.092-.007.149-.016c.256-.034.646-.11.92-.27-.328-.543-.421-1.178-.268-1.854a3.3 3.3 0 01.3-.81l.108-.187zM2.89 5.784l.04.007a.127.127 0 01.077.082l.006.04v1.315l-.006.041a.127.127 0 01-.078.082l-.039.006H1.478a.124.124 0 01-.117-.088l-.007-.04V5.912l.007-.04a.127.127 0 01.078-.083l.039-.006H2.89zm1.947 0l.039.007a.127.127 0 01.078.082l.006.04v1.315l-.007.041a.127.127 0 01-.078.082l-.039.006H3.424a.125.125 0 01-.117-.088L3.3 7.23V5.913a.13.13 0 01.085-.123l.039-.007h1.413zm1.976 0l.039.007a.127.127 0 01.077.082l.007.04v1.315l-.007.041a.127.127 0 01-.078.082l-.039.006H5.4a.124.124 0 01-.117-.088l-.006-.04V5.912l.006-.04a.127.127 0 01.078-.083l.039-.006h1.413zm1.952 0l.039.007a.127.127 0 01.078.082l.007.04v1.315a.13.13 0 01-.085.123l-.04.006H7.353a.124.124 0 01-.117-.088l-.006-.04V5.912l.006-.04a.127.127 0 01.078-.083l.04-.006h1.412zm1.97 0l.039.007a.127.127 0 01.078.082l.006.04v1.315a.13.13 0 01-.085.123l-.039.006H9.322a.124.124 0 01-.117-.088l-.006-.04V5.912l.006-.04a.127.127 0 01.078-.083l.04-.006h1.411zM4.835 3.892l.04.007a.127.127 0 01.077.081l.007.041v1.315a.13.13 0 01-.085.123l-.039.007H3.424a.125.125 0 01-.117-.09l-.007-.04V4.021a.13.13 0 01.085-.122l.039-.007h1.412zm1.976 0l.04.007a.127.127 0 01.077.081l.007.041v1.315a.13.13 0 01-.085.123l-.039.007H5.4a.125.125 0 01-.117-.09l-.006-.04V4.021l.006-.04a.127.127 0 01.078-.082l.039-.007h1.412zm1.953 0c.054 0 .1.037.117.088l.007.041v1.315a.13.13 0 01-.085.123l-.04.007H7.353a.125.125 0 01-.117-.09l-.006-.04V4.021l.006-.04a.127.127 0 01.078-.082l.04-.007h1.412zm0-1.892c.054 0 .1.037.117.088l.007.04v1.316a.13.13 0 01-.085.123l-.04.006H7.353a.124.124 0 01-.117-.088l-.006-.04V2.128l.006-.04a.127.127 0 01.078-.082L7.353 2h1.412z"
+                          ></path>
+                        </g></svg
+                    ></span></div
+                ></a>
+
+                <a href="###"
+                  ><div class="box box3">
+                    <span class="icon">
+                      <svg
+                        height="20px"
+                        width="20px"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            fill="#EEE"
+                            fill-rule="evenodd"
+                            d="M5.374 15c-.335 0-.66-.153-.874-.431l-3.254-4.172a1.15 1.15 0 01-.214-.978l1.165-5.207c.074-.345.298-.623.605-.776l4.715-2.32c.15-.078.317-.116.485-.116.168 0 .335.038.485.115L13.2 3.426c.308.153.532.432.606.777l1.165 5.207c.074.345 0 .7-.214.978L11.5 14.566c-.214.268-.54.434-.875.434h-5.25zm7.718-5.835l.031.008a.308.308 0 01.26.371.306.306 0 01-.396.223h-.004l-.003-.001-.003-.001-.03-.007-.05-.01a2.548 2.548 0 01-.274-.106 2.87 2.87 0 00-.533-.156.242.242 0 00-.171.063 4.76 4.76 0 00-.131-.023 3.972 3.972 0 01-1.764 2.212c.015.042.032.083.051.123a.239.239 0 00-.023.18c.074.17.165.332.271.484.06.078.114.16.164.244l.028.057.012.025a.306.306 0 01-.381.44.307.307 0 01-.172-.18 2.608 2.608 0 00-.01-.02l-.028-.058a2.545 2.545 0 01-.089-.28 2.835 2.835 0 00-.21-.512.242.242 0 00-.156-.095 5.926 5.926 0 01-.03-.053l-.035-.064a3.97 3.97 0 01-2.824-.007l-.069.125a.249.249 0 00-.132.064c-.104.17-.184.355-.237.548a2.525 2.525 0 01-.088.28l-.025.05-.013.027v.001a.307.307 0 11-.553-.261l.014-.03.026-.052c.05-.085.104-.166.164-.244.108-.156.2-.322.277-.496a.302.302 0 00-.028-.173l.056-.133A3.972 3.972 0 014.22 9.532l-.134.023a.34.34 0 00-.176-.062 2.872 2.872 0 00-.533.156c-.09.04-.181.075-.274.105l-.05.011-.03.007H3.02l-.002.002h-.005a.308.308 0 01-.397-.349.306.306 0 01.261-.245l.004-.001h.003l.006-.002c.024-.006.054-.014.076-.018.097-.013.195-.021.293-.023.186-.013.37-.043.549-.09a.422.422 0 00.131-.133l.128-.037a3.938 3.938 0 01.624-2.752l-.097-.087a.338.338 0 00-.062-.176 2.854 2.854 0 00-.455-.319 2.557 2.557 0 01-.254-.148 1.129 1.129 0 01-.063-.05l-.004-.004a.323.323 0 01-.076-.45.295.295 0 01.244-.107.365.365 0 01.213.08l.022.017c.016.013.034.026.046.037.071.067.139.139.202.213.125.137.263.262.412.372.056.03.121.036.182.018l.11.078a3.938 3.938 0 012.552-1.224l.007-.129a.332.332 0 00.1-.157 2.844 2.844 0 00-.034-.554 2.555 2.555 0 01-.042-.29v-.053-.025-.004-.004A.306.306 0 018 2.82a.308.308 0 01.306.337v.087a2.53 2.53 0 01-.041.29 2.85 2.85 0 00-.035.553.242.242 0 00.1.153v.007l.007.13c.967.087 1.87.522 2.54 1.223l.116-.083a.34.34 0 00.186-.02c.149-.11.287-.235.412-.373a2.53 2.53 0 01.202-.213l.051-.04.017-.014a.308.308 0 01.472.388.307.307 0 01-.09.09c-.008.005-.017.012-.025.02l-.043.033a2.549 2.549 0 01-.254.148 2.865 2.865 0 00-.455.32.24.24 0 00-.058.172 4.458 4.458 0 01-.05.044l-.058.053c.542.806.769 1.783.637 2.745l.123.036c.031.056.077.101.132.132.18.048.364.078.55.09.097.003.195.01.292.024l.058.013zm-2.875-3.1l-1.308.925-.004-.002a.27.27 0 01-.43-.205v-.001l-.091-1.598a3.183 3.183 0 011.833.882zM7.754 7.818h.492l.306.381-.11.476L8 8.886l-.443-.213-.11-.475.307-.381zM7.29 5.24c.107-.024.216-.043.326-.056l-.09 1.6-.008.004a.268.268 0 01-.293.256.27.27 0 01-.135-.05l-.002.001-1.316-.93c.419-.41.945-.696 1.518-.825zM5.296 6.663l1.201 1.071-.001.007a.269.269 0 01-.106.462l-.001.005-1.54.443a3.134 3.134 0 01.447-1.988zm1.608 2.846l-.612 1.474a3.16 3.16 0 01-1.27-1.586L6.6 9.13l.003.003a.265.265 0 01.18.029.27.27 0 01.117.341l.004.006zm1.806 1.896c-.572.13-1.17.1-1.726-.088l.777-1.4h.001a.27.27 0 01.475-.001h.006l.779 1.402a3.286 3.286 0 01-.312.087zm1.004-.416L9.096 9.5l.001-.003a.269.269 0 01.296-.37l.003-.004 1.593.269a3.147 3.147 0 01-1.275 1.597zm1.442-2.343L9.61 8.201l-.002-.006a.27.27 0 01-.185-.343.27.27 0 01.08-.12L9.5 7.73l1.195-1.067c.366.594.527 1.29.46 1.983z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </g></svg
+                    ></span></div
+                ></a>
+
+                <div class="box box4"></div>
+              </div>
+
+              <div class="card">
+                <div class="background"></div>
+                <div class="logo">Tools</div>
+
+                <a href="#"
+                  ><div class="box box1">
+                    <span class="icon">
+                      <svg 
+                      height="30px"
+                      width="30px"
+                      viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.29183 21V18.4407L9.3255 16.6219C9.36595 16.0561 9.58639 15.5228 9.94907 15.11C9.95438 15.1039 9.95972 15.0979 9.9651 15.0919C9.9791 15.0763 9.96988 15.0511 9.94907 15.0485V15.0485C7.52554 14.746 5.0005 13.7227 5.0005 9.26749C4.9847 8.17021 5.3427 7.10648 6.00437 6.27215C6.02752 6.24297 6.05103 6.21406 6.07492 6.18545V6.18545C6.10601 6.1482 6.11618 6.09772 6.10194 6.05134C6.10107 6.04853 6.10021 6.04571 6.09935 6.04289C6.0832 5.9899 6.06804 5.93666 6.05388 5.88321C5.81065 4.96474 5.86295 3.98363 6.20527 3.09818C6.20779 3.09164 6.21034 3.08511 6.2129 3.07858C6.22568 3.04599 6.25251 3.02108 6.28698 3.01493V3.01493C6.50189 2.97661 7.37036 2.92534 9.03298 4.07346C9.08473 4.10919 9.13724 4.14609 9.19053 4.18418V4.18418C9.22901 4.21168 9.27794 4.22011 9.32344 4.20716C9.32487 4.20675 9.32631 4.20634 9.32774 4.20593C9.41699 4.18056 9.50648 4.15649 9.59617 4.1337C11.1766 3.73226 12.8234 3.73226 14.4038 4.1337C14.4889 4.1553 14.5737 4.17807 14.6584 4.20199C14.6602 4.20252 14.6621 4.20304 14.6639 4.20356C14.7174 4.21872 14.7749 4.20882 14.8202 4.17653V4.17653C14.8698 4.14114 14.9187 4.10679 14.967 4.07346C16.6257 2.92776 17.4894 2.9764 17.7053 3.01469V3.01469C17.7404 3.02092 17.7678 3.04628 17.781 3.07946C17.7827 3.08373 17.7843 3.08799 17.786 3.09226C18.1341 3.97811 18.1894 4.96214 17.946 5.88321C17.9315 5.93811 17.9159 5.9928 17.8993 6.04723V6.04723C17.8843 6.09618 17.8951 6.14942 17.9278 6.18875C17.9289 6.18998 17.9299 6.19121 17.9309 6.19245C17.9528 6.21877 17.9744 6.24534 17.9956 6.27215C18.6573 7.10648 19.0153 8.17021 18.9995 9.26749C18.9995 13.747 16.4565 14.7435 14.0214 15.015V15.015C14.0073 15.0165 14.001 15.0334 14.0105 15.0439C14.0141 15.0479 14.0178 15.0519 14.0214 15.0559C14.2671 15.3296 14.4577 15.6544 14.5811 16.0103C14.7101 16.3824 14.7626 16.7797 14.7351 17.1754V21" stroke="#EEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 17C4.36915 17.0523 4.72159 17.1883 5.03065 17.3975C5.3397 17.6068 5.59726 17.8838 5.7838 18.2078C5.94231 18.4962 6.15601 18.7504 6.41264 18.9557C6.66927 19.161 6.96379 19.3135 7.27929 19.4043C7.59478 19.4952 7.92504 19.5226 8.25112 19.485C8.5772 19.4475 8.89268 19.3457 9.17946 19.1855" stroke="#EEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></span></div
+                ></a>
+
+                <a href="##"
+                  ><div class="box box2">
+                    <span class="icon"
+                      >
+                      <svg
+                        height="30px"
+                        width="30px"
+                        viewBox="0 0 192 192"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="enable-background: new 0 0 192 192"
+                        xml:space="preserve"
+                        fill="#000000"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M95.2 170c-11.6 0-22-3.1-30.9-9.1-8.8-6-15.4-14.6-19.7-25.6-2.5-6.4-4-13.4-4.7-21.4-.8-9.5-.2-19.2 1.9-28.7 3.3-15.3 10-28.5 19.8-39.5 9.7-10.8 21.2-18.1 34.3-21.5 5.6-1.5 11.2-2.2 16.5-2.2 6.4 0 12.7 1.1 18.7 3.3 8.9 3.3 15 9 17.9 17 1.4 3.7 1.8 7.6 1.4 12-.6 6.2-2.6 11.7-6 16.4-3.9 5.4-8.6 8.7-14.3 10.1-1 .3-2.1.4-3.3.4-.5 0-.9 0-1.4-.1-1.7-.2-3.2-.9-4.2-2.2-1-1.3-1.4-3-1.2-4.7.3-2 1.1-3.7 1.9-5.1l.3-.6c1.6-3.2 3.1-6.2 3.9-9.4 1.3-5.4 1.3-9.5-.1-13.3-1.5-4-4.3-6.5-8.5-7.5-1.6-.4-3.2-.6-4.8-.6-3.6 0-7.4.9-11.4 2.7C93.4 44 86.7 50 81 58.7c-3.9 6-6.9 12.7-9.1 20.5-1.6 5.6-2.6 11.5-3.2 17.6-.3 2.9-.5 6.3-.5 9.6.1 9.7 1.5 17.4 4.5 24.2 3.3 7.6 7.8 12.9 13.9 16.3 4.1 2.3 8.7 3.5 13.6 3.5.8 0 1.7 0 2.6-.1 10.4-.8 19.6-5.5 28-14.3 4.3-4.5 7.9-9.7 11-15.9.5-.9 1-1.9 1.8-2.7 1-1.1 2.3-1.7 3.7-1.7 1.7 0 3.2.9 4.2 2.5 1.2 2 1.1 4.2.9 5.6-.6 4.1-2.1 8.1-4.6 12.8-7.2 12.9-17.1 22.4-29.4 28.3-6.3 3-13.1 4.7-20.1 5-1.1.1-2.1.1-3.1.1z"
+                            style="
+                              fill: none;
+                              stroke: #eeeeee;
+                              stroke-width: 12;
+                              stroke-linejoin: round;
+                              stroke-miterlimit: 10;
+                            "
+                          ></path>
+                        </g></svg
+                    ></span></div
+                ></a>
+
+                <a href="###"
+                  ><div class="box box3">
+                    <span class="icon"
+                      >
+                      <svg 
+                      height="30px"
+                      width="30px"
+                      fill="#EEEEEE" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#EEEEEE"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.875 7.568c-0.156 0-0.26 0.021-0.365 0.047v0.016h0.016c0.073 0.135 0.193 0.24 0.286 0.365 0.073 0.141 0.135 0.286 0.203 0.427l0.021-0.021c0.125-0.089 0.188-0.229 0.188-0.443-0.052-0.063-0.063-0.13-0.109-0.188-0.052-0.089-0.167-0.135-0.24-0.203zM7.693 25.161h-1.234c-0.042-2.083-0.167-4.042-0.359-5.88h-0.010l-1.88 5.88h-0.943l-1.865-5.88h-0.016c-0.135 1.76-0.224 3.724-0.26 5.88h-1.125c0.073-2.625 0.255-5.083 0.547-7.375h1.531l1.781 5.417h0.010l1.797-5.417h1.458c0.323 2.688 0.516 5.146 0.573 7.375zM13.047 19.719c-0.5 2.729-1.167 4.714-1.984 5.948-0.646 0.953-1.349 1.432-2.115 1.432-0.203 0-0.453-0.063-0.755-0.188v-0.656c0.151 0.021 0.323 0.036 0.516 0.036 0.359 0 0.646-0.104 0.865-0.297 0.26-0.24 0.391-0.51 0.391-0.807 0-0.208-0.099-0.625-0.307-1.26l-1.349-4.208h1.214l0.969 3.146c0.219 0.719 0.313 1.214 0.271 1.5 0.536-1.417 0.906-2.969 1.115-4.646zM29.484 25.161h-3.51v-7.375h1.182v6.469h2.328zM25.057 25.339l-1.354-0.667c0.12-0.099 0.234-0.208 0.339-0.333 0.578-0.672 0.865-1.677 0.865-3 0-2.443-0.958-3.661-2.875-3.661-0.938 0-1.672 0.307-2.198 0.927-0.573 0.677-0.865 1.677-0.865 2.995 0 1.297 0.255 2.245 0.766 2.854 0.469 0.542 1.172 0.818 2.115 0.818 0.349 0 0.672-0.042 0.964-0.13l1.766 1.031 0.484-0.833zM20.667 23.682c-0.302-0.479-0.448-1.25-0.448-2.313 0-1.859 0.563-2.786 1.693-2.786 0.589 0 1.026 0.224 1.302 0.667 0.297 0.484 0.448 1.245 0.448 2.297 0 1.87-0.568 2.813-1.693 2.813-0.594 0-1.026-0.224-1.307-0.667zM18.458 23.12c0 0.625-0.229 1.141-0.693 1.536-0.458 0.401-1.068 0.604-1.844 0.604-0.724 0-1.417-0.229-2.099-0.688l0.318-0.635c0.583 0.292 1.109 0.438 1.589 0.438 0.443 0 0.792-0.099 1.042-0.292 0.25-0.198 0.401-0.474 0.401-0.823 0-0.438-0.307-0.813-0.865-1.125-0.516-0.286-1.552-0.875-1.552-0.875-0.563-0.411-0.839-0.849-0.839-1.573 0-0.599 0.208-1.078 0.625-1.443 0.422-0.375 0.958-0.557 1.625-0.557 0.682 0 1.307 0.182 1.87 0.547l-0.286 0.635c-0.479-0.203-0.953-0.307-1.417-0.307-0.38 0-0.672 0.094-0.875 0.276s-0.328 0.411-0.328 0.698c0 0.438 0.313 0.813 0.885 1.135 0.526 0.286 1.583 0.891 1.583 0.891 0.578 0.406 0.865 0.844 0.865 1.557zM30.964 15.313c-0.714-0.016-1.266 0.057-1.729 0.255-0.13 0.052-0.344 0.052-0.365 0.219 0.073 0.073 0.083 0.188 0.146 0.286 0.109 0.177 0.292 0.417 0.464 0.542 0.188 0.146 0.375 0.292 0.568 0.417 0.349 0.214 0.74 0.339 1.083 0.552 0.193 0.125 0.391 0.286 0.583 0.417 0.099 0.068 0.161 0.188 0.286 0.229v-0.026c-0.063-0.078-0.078-0.193-0.141-0.286-0.089-0.089-0.177-0.167-0.266-0.255-0.26-0.349-0.578-0.651-0.927-0.901-0.286-0.193-0.911-0.464-1.026-0.792l-0.016-0.021c0.193-0.016 0.422-0.089 0.609-0.141 0.302-0.078 0.583-0.063 0.896-0.141 0.141-0.036 0.281-0.078 0.427-0.125v-0.078c-0.161-0.161-0.281-0.38-0.448-0.531-0.453-0.391-0.953-0.776-1.469-1.094-0.281-0.182-0.635-0.297-0.932-0.448-0.104-0.052-0.286-0.078-0.344-0.167-0.161-0.198-0.255-0.453-0.37-0.688-0.255-0.49-0.505-1.031-0.729-1.552-0.161-0.349-0.255-0.693-0.453-1.016-0.917-1.516-1.917-2.432-3.448-3.333-0.328-0.188-0.724-0.266-1.141-0.365-0.224-0.010-0.443-0.026-0.667-0.036-0.146-0.063-0.286-0.229-0.411-0.313-0.51-0.323-1.823-1.016-2.193-0.099-0.24 0.583 0.354 1.151 0.563 1.443 0.151 0.208 0.344 0.438 0.453 0.667 0.063 0.156 0.078 0.318 0.141 0.479 0.141 0.391 0.276 0.828 0.464 1.193 0.099 0.188 0.203 0.385 0.328 0.552 0.073 0.099 0.198 0.141 0.224 0.302-0.125 0.182-0.135 0.448-0.203 0.667-0.323 1.010-0.198 2.255 0.255 3 0.146 0.224 0.484 0.714 0.938 0.526 0.401-0.161 0.313-0.667 0.427-1.115 0.026-0.109 0.010-0.177 0.063-0.25v0.021c0.13 0.25 0.255 0.49 0.37 0.74 0.271 0.438 0.755 0.891 1.156 1.193 0.214 0.161 0.38 0.438 0.646 0.536v-0.026h-0.021c-0.057-0.078-0.13-0.115-0.203-0.177-0.161-0.161-0.339-0.359-0.469-0.536-0.37-0.5-0.703-1.052-0.995-1.62-0.146-0.281-0.271-0.583-0.385-0.859-0.052-0.104-0.052-0.266-0.141-0.318-0.135 0.193-0.333 0.359-0.427 0.604-0.172 0.38-0.188 0.854-0.255 1.344-0.031 0.010-0.016 0-0.031 0.021-0.286-0.073-0.385-0.365-0.49-0.615-0.271-0.635-0.313-1.651-0.083-2.38 0.063-0.188 0.328-0.776 0.224-0.953-0.057-0.172-0.234-0.271-0.328-0.406-0.12-0.167-0.24-0.38-0.323-0.568-0.214-0.5-0.318-1.052-0.552-1.552-0.104-0.229-0.292-0.469-0.443-0.682-0.172-0.24-0.359-0.411-0.49-0.693-0.047-0.099-0.109-0.26-0.036-0.365 0.016-0.073 0.052-0.099 0.125-0.12 0.115-0.099 0.448 0.026 0.563 0.083 0.328 0.13 0.604 0.255 0.88 0.443 0.125 0.089 0.26 0.255 0.422 0.302h0.188c0.286 0.063 0.604 0.016 0.87 0.099 0.474 0.151 0.901 0.37 1.286 0.609 1.167 0.745 2.125 1.797 2.776 3.052 0.109 0.203 0.156 0.391 0.255 0.604 0.182 0.443 0.417 0.885 0.604 1.307s0.365 0.849 0.635 1.198c0.135 0.188 0.667 0.286 0.911 0.38 0.177 0.083 0.453 0.156 0.609 0.25 0.307 0.188 0.609 0.401 0.896 0.609 0.146 0.099 0.589 0.323 0.615 0.5z"></path> </g></svg></span></div
+                ></a>
+
+                <div class="box box4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projectsContainer">
+        <div id="projectsText">
+          <h1><span id="hero-name">Projects</span> I am and I have worked on.</h1>
+        </div>
+
+        <div class="projectDivsContainer">
+          <div class="projectsTopContainer">
+            <div class="topLeft">
+              <div class="projectTop">
+                <img class="projectImage" src="./assets/unidriveBG1.png" alt="">
+                <div class="coverInfo">
+                  <div class="projectTitle">
+                    UniDrive.
+                  </div>
+                  <div class="projectDescription">
+                    UniDrive is a fully responsive ride-sharing web application designed for college-going students. It is built using HTML and CSS for the front end, Node.js and Express.js for the backend, and integrates MapBox for mapping functionality. Stripe is used as the payment gateway for transactions.
+                  </div>
+                </div>
+              </div>
+              <div class="projectNav"></div>
+            </div>
+            <div class="topMid">
+              <div class="projectTop">
+                <img class="projectImage" src="./assets/nikeBG.png" alt="">
+                <div class="coverInfo">
+                  <div class="projectTitle">
+                    Employee Manager.
+                  </div>
+                  <div class="projectDescription">
+                    The Employee Management System is a basic Java application developed using Apache NetBeans and JDBC for database connectivity with MySQL. It allows for the management of employee records, including adding, updating, and deleting employee information.
+                  </div>
+                </div>
+              </div>
+              <div class="projectNav"></div>
+            </div>
+            <div class="topRight">
+              <div class="projectTop">
+                <img class="projectImage" src="./assets/nikeBG.png" alt="">
+                <div class="coverInfo">
+                  <div class="projectTitle">
+                    Nike Landing Page
+                  </div>
+                  <div class="projectDescription">
+                    This project is a landing page clone of Nike's website, built using React and Tailwind CSS. It replicates the design and style of Nike's landing page, providing an immersive experience for users.
+                  </div>
+                </div>
+              </div>
+              <div class="projectNav"></div>
+            </div>
+          </div>
+          <div class="projectsBottomContainer">
+            <div class="bottomLeft">
+              <div class="projectTop">
+                <img class="projectImage" src="./assets/digitalTwinBG.png" alt="">
+                <div class="coverInfo">
+                  <div class="projectTitle">
+                    Digital Twin.
+                  </div>
+                  <div class="projectDescription">
+                    Digital Twin is a decentralized blockchain application developed on the Zbyte platform. It utilizes IPFS for file storage and smart contracts written in Solidity for decentralized transactions. The app aims to provide a secure and transparent platform for managing digital assets.
+                  </div>
+                </div>
+              </div>
+              <div class="projectNav"></div>
+            </div>
+            <div class="bottomRight">
+              <div class="projectTop">
+                <img class="projectImage" src="./assets/youtubeBG.png" alt="">
+                <div class="coverInfo">
+                  <div class="projectTitle">
+                    YouTube.
+                  </div>
+                  <div class="projectDescription">
+                    A simple YouTube clone created using basic HTML and CSS. This project mimics the basic layout and functionality of YouTube, allowing users to view videos and interact with the interface. This was my first hands-on front-end project.
+                  </div>
+                </div>
+              </div>
+              <div class="projectNav"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+
+    
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
